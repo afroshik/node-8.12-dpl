@@ -5,7 +5,7 @@ RUN apt-get update -qqy \
     default-jre \
     zip \
     unzip \
-    ruby \
+    ruby-full \
     curl \
     gnupg \
     xvfb \
