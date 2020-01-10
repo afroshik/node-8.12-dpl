@@ -5,7 +5,7 @@ RUN apt-get update && apt-get -y install curl gnupg
 
 RUN curl -L https://get.rvm.io | bash -s stable
 RUN /bin/bash -l -c "rvm requirements"
-RUN /bin/bash -l -c "rvm install ruby-2.4.2"
+RUN /bin/bash -l -c "rvm install ruby"
 RUN /bin/bash -l -c "gem install bundler --no-ri --no-rdoc"
 
 RUN apt-get install -qqy \
