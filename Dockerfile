@@ -12,7 +12,7 @@ RUN apt-get update -qqy \
     libpython-dev \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
   
-RUN apt-get update && apt-get install ruby2.2
+RUN apt-get update && apt-get install ruby2.5
   
 RUN yarn global add npm
 
