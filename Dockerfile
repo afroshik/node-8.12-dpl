@@ -12,6 +12,8 @@ RUN apt-get update -qqy \
     python-pip \
     libpython-dev \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
+  
+RUN apt-add-repository ppa:brightbox/ruby-ng && apt-get update && apt-get install ruby2.2
 
 RUN yarn global add npm
 
