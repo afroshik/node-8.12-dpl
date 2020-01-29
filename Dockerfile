@@ -5,15 +5,14 @@ RUN apt-get update -qqy \
     default-jre \
     zip \
     unzip \
+    ruby \
     curl \
     gnupg \
     xvfb \
     python-pip \
     libpython-dev \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
-  
-RUN apt-get update && apt-get install ruby2.5
-  
+
 RUN yarn global add npm
 
 RUN gem install dpl
