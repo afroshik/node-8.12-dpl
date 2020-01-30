@@ -14,10 +14,10 @@ RUN apt-get update -qqy \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
   
 RUN apt-get update
-RUN sudo apt-get install software-properties-common
-RUN sudo apt-add-repository ppa:brightbox/ruby-ng
-RUN sudo apt-get update
-RUN sudo apt-get install ruby2.4 ruby2.4-dev
+RUN apt-get install software-properties-common
+RUN apt-add-repository ppa:brightbox/ruby-ng-experimental
+RUN apt-get update
+RUN apt-get install ruby2.4
 
 RUN yarn global add npm
 
