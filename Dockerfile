@@ -13,7 +13,6 @@ RUN apt-get update -qqy \
     libpython-dev \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
   
-RUN apt-get update
 RUN apt-get install software-properties-common
 RUN apt-add-repository ppa:brightbox/ruby-ng-experimental
 RUN apt-get update
