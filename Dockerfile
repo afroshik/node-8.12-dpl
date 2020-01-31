@@ -13,8 +13,8 @@ RUN apt-get update -qqy \
     libpython-dev \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
   
-RUN apt-get install libssl-dev libreadline-dev libyaml-dev \
-  libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties \
+RUN apt-get update && apt-get install libssl-dev libreadline-dev libyaml-dev \
+  libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
  
 RUN apt-get update
