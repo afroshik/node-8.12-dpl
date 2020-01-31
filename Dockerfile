@@ -13,10 +13,9 @@ RUN apt-get update -qqy \
     libpython-dev \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
   
-RUN apt-get install software-properties-common
+RUN apt-get update && apt-get install -y software-properties-common
 RUN apt-add-repository ppa:brightbox/ruby-ng-experimental
-RUN apt-get update
-RUN apt-get install ruby2.4
+RUN apt-get update && apt-get install ruby2.4
 
 RUN yarn global add npm
 
