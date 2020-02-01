@@ -14,9 +14,8 @@ RUN apt-get update -qqy \
   
 RUN apt-get update && apt-get install -y libssl-dev libreadline-dev libyaml-dev \
   libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common \
+  ruby2.5 \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
- 
-RUN apt-get update && apt-get install -y ruby2.4
 
 RUN yarn global add npm
 
